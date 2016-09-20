@@ -1,0 +1,214 @@
+// -----------------
+// PROMO PAGE STYLES
+// -----------------
+.cyber-monday,
+.mobile-optimization {
+	.width-1-2 + .width-1-2 {
+		padding-left: @marginSmall;
+	}
+
+	.hero {
+		background-image: url(/lib/img/cyber-monday-hero.jpg);
+
+		.block {
+			margin-top: @marginLg;
+		}
+
+		p {
+			margin: 0;
+			width: 550px;
+			font-size: 40px;
+			line-height: 56px;
+			font-weight: @fontWeightXLight;
+			text-transform: uppercase;
+			color: @colorWhite;
+
+			strong {
+				font-size: 68px;
+				font-weight: @fontWeightBold;
+			}
+
+			img {
+				margin-top: @marginMed;
+				width: 170px;
+			}
+		}
+	}
+
+	p, ul {
+		color: @colorDarkGrey;
+	}
+
+	p {
+		line-height: 20px;
+	}
+
+	ul {
+		line-height: 26px;
+	}
+
+	h2 {
+		font-weight: @fontWeightXLight;
+		text-transform: none;
+	}
+
+	.btn {
+		min-width: 250px;
+	}
+
+	.skill-icons {
+		img {
+			max-width: 75px;
+		}
+
+		p {
+			text-align: center;
+			text-transform: uppercase;
+			color: @colorBlack;
+			.fontTiny;
+			.lineHeightTiny;
+		}
+	}
+
+	form {
+		margin-left: @marginMed;
+
+		input {
+			display: block;
+			width: 100%;
+			margin-top: @marginMed;
+			.fontXXSmall;
+			padding-left: @marginSmall;
+			padding-right: @marginSmall;
+		}
+	}
+
+	.logo-block {
+		text-align: center;
+
+		img {
+			.width-5-8;
+		}
+	}
+
+	.footer {
+		height: inherit;
+		padding: @marginSmall 0;
+
+		p {
+			margin: 0;
+			color: @colorWhite;
+			text-transform: none;
+			.fontXXSmall;
+			line-height: 18px;
+			text-align: right;
+			font-weight: @fontWeightXLight;
+		}
+
+		a {
+			color: @colorWhite;
+			text-decoration: underline;
+
+			&:active, &:hover {
+				color: @colorLightGrey;
+			}
+		}
+
+		&.affix {
+			p {
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+.mobile-optimization {
+	p {
+		.fontXSmall;
+		.lineHeightXSmall;
+		margin: 0;
+	}
+
+	.hero.mobile-promo {
+		min-height: 500px;
+		background-image: url('/lib/img/mobile-optimization-hero-v3.jpg');
+		background-position: bottom right;
+		background-color: #006176;
+
+		p {
+			width: auto;
+		}
+	}
+
+	.logo-block {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+// Promotional pages used in email campaigns and such
+.promo-page {
+	.header {
+		background-color: fade(@colorBlack, 60%);
+
+		.nav-bar {
+			display: none;
+		}
+	}
+}
+
+// ----------------
+// RESPONSIVE STYLES
+// ----------------
+
+// Smaller tablets, landscape smartphones
+@media screen and (max-width: 641px) {
+	.cyber-monday,
+	.mobile-optimization {
+		.width-1-2 + .width-1-2 {
+			padding-left: 0;
+		}
+
+		.hero {
+			min-height: 200px;
+
+			p {
+				margin: 0 auto;
+				width: 300px;
+				font-size: 20px;
+				line-height: 30px;
+				text-align: center;
+
+				strong {
+					font-size: 34px;
+				}
+			}
+		}
+
+		h2 {
+			font-size: 22px;
+		}
+
+		form {
+			margin-left: 0;
+		}
+
+		.btn-primary {
+			width: 100%;
+		}
+
+		.footer {
+			padding: @marginSmall;
+
+			p {
+				margin-bottom: @marginSmall;
+				text-align: left;
+			}
+		}
+	}
+
+	.mobile-optimization .hero.mobile-promo {
+		background-image: url('/lib/img/mobile-optimization-mobile-hero.jpg');
+	}
+}

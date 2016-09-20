@@ -1,0 +1,51 @@
+// --------------
+// BUTTON STYLES
+// --------------
+a.btn,
+button.btn {
+	padding: 7px 15px;
+	.bodyFont;
+	text-transform: uppercase;
+	border: 1px solid @colorLightGrey;
+	border-radius: 0;
+	color: @colorMedGrey;
+	background-color: transparent;
+
+	&:hover {
+		background-color: @colorLightGrey;
+		color: @colorDarkGrey;
+	}
+
+	&.bold {
+		border: 1px solid @colorBlack;
+		color: @colorBlack;
+		font-weight: @fontWeightBold;
+	}
+}
+
+a.btn-primary,
+button.btn-primary {
+	background-color: @colorBlue;
+	color: @colorWhite;
+	font-weight: @fontWeightBold;
+}
+
+a.btn-light-blue {
+	background-color: @colorButtonBlue;
+	color: @colorWhite;
+	border-radius: 4px;
+	display: inline-block;
+	padding: @marginSmall @marginLg;
+	text-align: center;
+
+	&:hover {
+		background-color: @colorButtonBlueHover;
+		color: @colorWhite;
+		text-decoration: none;
+	}
+
+	&.white-bg:hover {
+		border: 1px solid @colorWhite;
+		padding: 9px 29px;
+	}
+}

@@ -1,0 +1,9 @@
+{
+    "require": {
+        "monolog/monolog": "1.0.*",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "require": {
+      "google/apiclient": "1.0.*@beta"
+    }
+}

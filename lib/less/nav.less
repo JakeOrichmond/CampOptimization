@@ -1,0 +1,156 @@
+// --------------
+// HEADER STYLES
+// --------------
+.header {
+	position: fixed;
+	top: 0;
+	height: @headerHeight;
+	width: 100%;
+	z-index: 11;
+	background-color: @colorLightBlue;
+
+	.nav-container {
+
+		.logo {
+			float: left;
+			margin-top: @marginTiny * 3;
+			width: @headerHeight - (@marginLg);
+		}
+
+		p {
+			line-height: @headerHeight;
+			float: left;
+			font-size: 2.1rem;
+			padding: 0 0 0 15px;
+			color: @colorWhite;
+			font-weight: @fontWeightBold;
+		}
+
+		.nav-bar {
+			ul.nav-menu {
+				float: right;
+				list-style-type: none;
+				font-size: 0;
+
+				li {
+					display: inline-block;
+					margin: 0;
+					color: @colorWhite;
+					.fontXSmall;
+					line-height: @headerHeight;
+					text-transform: capitalize;
+
+					&.active {
+						a {
+							color: @colorLightBlue;
+							background-color: @colorWhite;
+							text-decoration: none;
+							-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+							-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+							box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+						}
+					}
+
+					a {
+						display: block;
+						color: @colorWhite;
+						padding: 0 20px;
+						.bodyFont;
+
+						&:hover {
+							color: @colorLightBlue;
+							background-color: @colorWhite;
+							text-decoration: none;
+							-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+							-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+							box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+						}
+					}
+				}
+			}
+
+			.mobile-menu-icon {
+				float: right;
+				.fontSmall;
+				color: @colorWhite;
+				line-height: @headerHeight;
+				margin: 0;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.content-page & {
+		opacity: 1;
+	}
+}
+// --------------
+// Desktop STYLES
+// --------------
+@media screen and (min-width: 961px) {
+	.header {
+		.nav-container {
+			.nav-bar {
+				ul.nav-menu {
+					display: block !important;
+				}
+			}
+		}
+	}
+}
+
+// --------------
+// MOBILE STYLES
+// --------------
+@media screen and (max-width: 960px) {
+
+	// Header/nav adjustments
+	.header {
+
+		.nav-container {
+
+			.nav-bar {
+				ul.nav-menu {
+					display: none;
+					position: absolute;
+					float: none;
+					list-style-type: none;
+					margin-top: @headerHeight;
+					margin-left: -30px;
+					padding-left: 0;
+					width: 100%;
+					background: #249EA0;
+					padding-bottom: 1px;
+
+					li {
+						display: block;
+						background-color: @colorLightBlue;
+						padding: 0;
+						text-align: center;
+						.fontXSmall;
+						font-weight: @fontWeightBold;
+
+						+ li:before {
+							content: "";
+							margin: 0;
+						}
+
+						&.active {
+							a {
+								color: @colorWhite;
+								background-color: @colorLightBlueHover;
+							}
+						}
+
+						a {
+							&:hover {
+								color: @colorWhite;
+								background-color: @colorLightBlueHover;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

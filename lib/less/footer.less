@@ -1,0 +1,179 @@
+// --------------
+// FOOTER STYLES
+// --------------
+.footer {
+	.light;
+	line-height: 100px;
+
+	background-color: @colorBlack;
+	height: @footerHeight;
+	border: 1px solid @colorBlack;
+
+	.side-margin {
+		max-height: 100%;
+	}
+
+	.footer-logo-tag {
+		display: inline-block;
+		float: none;
+		margin-right: @marginLg;
+		margin-bottom: @marginSmall;
+		vertical-align: middle;
+
+		a {
+			height: 50px;
+			width: 50px;
+			display: block;
+
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+
+	.footer-contact {
+
+		div:first-child {
+			margin-right: @marginLg;
+		}
+		div {
+			display: inline-block;
+			max-height: 90px;
+
+			p {
+				line-height: 20px;
+				line-height: 2rem;
+				font-size: 18px;
+				font-size: 1.8rem;
+				color: @colorWhite;
+			}
+		}
+
+		a {
+			margin: 0 @marginSmall;
+			color: @colorWhite;
+			.bodyFont;
+			font-weight: 200;
+			font-size: 15px;
+			font-size: 1.5rem;
+
+			&:focus {
+				outline: none;
+				border-bottom: none;
+				text-decoration: none;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		a:first-child {
+			margin-left: 0;
+		}
+		span {
+			font-size: 13px;
+			font-size: 1.3rem;
+		}
+	}
+
+	// The "affix" class is added if the viewport height exceeds the length of the content so that the footer
+	// never appears halfway up the page for very short pages.
+	&.affix {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.footer {
+		line-height: normal;
+
+		.footer-logo-tag {
+			float: left;
+		}
+
+		.footer-contact {
+			line-height: inherit;
+
+			div:first-child {
+				margin-right: 0;
+				margin-top: 21px;
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.footer {
+		border: none;
+
+		.footer-logo-tag {
+			margin: 25px @marginLg 25px 0;
+		}
+
+		.footer-contact {
+
+			div:first-child {
+				width: 190px;
+				float: left;
+			}
+
+			div:first-child + div {
+				margin: 8px auto 8px 0;
+				float: right;
+			}
+
+			div {
+				p {
+					line-height: 28px;
+					line-height: 2.8rem;
+				}
+			}
+
+			a {
+				display: block;
+				margin: @marginTiny 0;
+			}
+
+			span {
+				display: none;
+			}
+		}
+	}
+}
+@media screen and (max-width: 660px) {
+	.footer {
+		height: 200px;
+
+		.footer-contact {
+
+			div:first-child + div {
+				clear: both;
+				float: none;
+				margin: auto 0;
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 381px) {
+    .footer {
+
+        .footer-logo-tag {
+            margin: 0 @marginLg 25px 0;
+        }
+
+        .footer-contact {
+            div:first-child {
+                width: auto;
+                float: none;
+            }
+        }
+    }
+}

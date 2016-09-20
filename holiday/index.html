@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>roboboogie</title>
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/holiday/robochristmas.css">
+</head>
+<body>
+<div id="header">
+	<a href="/holiday/christmas.mp3" id="music"></a>
+	<img src="/holiday/img/header_banner.png">
+</div>
+<div id="main_content">
+	<ul class="santa-grid">
+		<li>
+			<img class="santa-banner" src="/holiday/img/hipster_banner.png">
+
+			<div class="santa" id="hipster">
+				<div class="santa-details"><img src="/holiday/img/hipster_bg.png"></div>
+				<div class="santa-face hipster"></div>
+			</div>
+		</li>
+		<li>
+			<img class="santa-banner" src="/holiday/img/beermaster_banner.png">
+
+			<div class="santa" id="beermaster">
+				<div class="santa-details"><img src="/holiday/img/beermaster_bg.png"></div>
+				<div class="santa-face beermaster"></div>
+			</div>
+		</li>
+		<li>
+			<img class="santa-banner" src="/holiday/img/auntmillie_banner.png">
+
+			<div class="santa" id="millie">
+				<div class="santa-details"><img src="/holiday/img/auntmillie_bg.png"></div>
+				<div class="santa-face millie"></div>
+			</div>
+		</li>
+		<li>
+			<img class="santa-banner" src="/holiday/img/white_elephant_banner.png">
+
+			<div class="santa" id="elephant">
+				<div class="santa-details"><img src="/holiday/img/white_elephnat_bg.png"></div>
+				<div class="santa-face elephant"></div>
+			</div>
+		</li>
+		<li>
+			<img class="santa-banner" src="/holiday/img/corpo_banner.png">
+
+			<div class="santa" id="corpo">
+				<div class="santa-details"><img src="/holiday/img/corpo_bg.png"></div>
+				<div class="santa-face corpo"></div>
+			</div>
+		</li>
+		<li>
+			<img class="santa-banner" src="/holiday/img/lumber_hack_banner.png">
+
+			<div class="santa" id="lumberhack">
+				<div class="santa-details"><img src="/holiday/img/lumber_hack_bg.png"></div>
+				<div class="santa-face lumberhack"></div>
+			</div>
+		</li>
+	</ul>
+	<div id="presents" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<img src="/holiday/img/form_banner.png">
+				</div>
+				<div class="row santa-form-content">
+					<div class="col-md-7">
+						<div class="santa-sack"></div>
+					</div>
+					<div class="santa-form col-md-5">
+						<div class="santa-text">Unfortunately, Santa's misfit mall helpers do not have the Big Guy's magical powers.
+							So, we need a bit of information from you to ensure proper sack delivery.*
+						</div>
+						<form role="form" class="form-horizontal" id="sack-form" method="get">
+							<fieldset>
+								<div class="form-group">
+									<!--[if lt IE 10]><label for="name">Name</label><![endif]-->
+									<input id="name" type="text" name="name" class="form-control required" minlength="4"
+												 placeholder="Name" required/>
+								</div>
+								<div class="form-group">
+									<!--[if lt IE 10]><label for="email">Email</label><![endif]-->
+									<input id="email" type="email" name="email" class="form-control required" placeholder="Email"
+												 required/>
+								</div>
+								<input id="selected-santa" type="hidden" name="selected-santa" value="">
+								<img class="gimme-presents" src="/holiday/img/submit_sack_button.png" onclick="$().sendToSanta();">
+							</fieldset>
+						</form>
+						<div class="gimme-presents small">*Please allow 1-2 weeks for delivery... the misfits might also be drunk.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<img src="/holiday/img/footer_banner.png">
+
+	<script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="/holiday/js/jquery-validation-1.11.1/dist/jquery.validate.min.js"></script>
+	<script src="/holiday/js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="/holiday/santa-script.js"></script>
+	<script type="text/javascript">
+		(function () {
+			var config = {
+				kitId: 'xez3mcg',
+				scriptTimeout: 3000
+			};
+			var h = document.getElementsByTagName("html")[0];
+			h.className += " wf-loading";
+			var t = setTimeout(function () {
+				h.className = h.className.replace(/(\s|^)wf-loading(\s|$)/g, " ");
+				h.className += " wf-inactive"
+			}, config.scriptTimeout);
+			var tk = document.createElement("script"), d = false;
+			tk.src = '//use.typekit.net/' + config.kitId + '.js';
+			tk.type = "text/javascript";
+			tk.async = "true";
+			tk.onload = tk.onreadystatechange = function () {
+				var a = this.readyState;
+				if (d || a && a != "complete" && a != "loaded")return;
+				d = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				}
+				catch (b) {
+				}
+			};
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(tk, s)
+		})();
+	</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,405 @@
+// -----------------------
+// 5in30 STYLES
+// -----------------------
+.five-in-thirty {
+    .hero {
+        padding-top: 40px;
+        background-image: url(/lib/img/heroes/5in30_hero.jpg);
+
+        .left-box {
+            display: inline-block;
+            zoom: 1;
+            vertical-align: top;
+            width: 300px;
+            height: 310px;
+            position: relative;
+            padding: 12px;
+            background-size: 100% 100%;
+            text-align: center;
+
+            .overlay {
+                background-color: @colorButtonBlue;
+                opacity: 0.2;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: block;
+                position: absolute;
+
+                & + div {
+                    position: relative;
+                }
+            }
+
+            h4 {
+                color: @colorWhite;
+                font-size: 96px;
+                font-size: 9.6rem;
+                font-weight: 600;
+                letter-spacing: -3px;
+                border-bottom: 4px solid;
+                padding-bottom: @marginLg;
+                display: inline-block;
+
+                span {
+                    font-size: 46px;
+                    font-size: 4.6rem;
+                    vertical-align: middle;
+                    color: #28A6E0;
+                    border-bottom: 5px solid;
+                    letter-spacing: 0px;
+                }
+            }
+            p {
+                padding-top: @marginLg;
+                font-size: 21px;
+                font-size: 2.1rem;
+                font-weight: 100;
+                text-transform: uppercase;
+                line-height: 34px;
+                line-height: 3.4rem;
+
+                span {
+                    font-weight: 700;
+                    color: @colorButtonBlue;
+                }
+            }
+        }
+
+        .right-headline {
+            display: inline-block;
+            padding-top: 40px;
+            margin-left: 40px;
+            max-width: 600px;
+            width: 70%;
+            width: ~"-moz-calc(100% - 340px)";
+            width: ~"-webkit-calc(100% - 340px)";
+            width: ~"-o-calc(100% - 340px)";
+            width: ~"calc(100% - 340px)";
+
+                h1 {
+                    text-transform: none;
+                    font-weight: 300;
+                    font-size: 60px;
+                    font-size: 6rem;
+                }
+        }
+    }
+
+    .contact-container {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .left-side {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+
+        h4 {
+            text-transform: none;
+            font-size: 28px;
+            font-size: 2.8rem;
+            line-height: 32px;
+            line-height: 3.2rem;
+
+            &.mobile {
+                display: none;
+            }
+        }
+
+        p {
+            color: @colorBlack;
+            font-weight: 300;
+            font-size: 18px;
+            font-size: 1.8rem;
+            margin-top: 15px;
+        }
+    }
+
+    .right-side {
+        width: 45%;
+        max-width: 580px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10%;
+        background-color: #efefef;
+        padding: @marginMed @marginLg;
+
+        p {
+            color: @colorBlack;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        form {
+            width: 100%;
+
+            label {
+                display: none;
+            }
+
+            input {
+                width: 100%;
+                text-indent: 15px;
+
+                &:focus {
+                    outline: 1px solid @colorButtonBlue;
+                    border-color: @colorButtonBlue;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 130px;
+                padding-left: 15px;
+                padding-top: 15px;
+
+                &:focus {
+                    outline: 1px solid @colorButtonBlue;
+                    border-color: @colorButtonBlue;
+                }
+            }
+
+            #calendar {
+                visibility: hidden;
+                height: 0;
+                position: absolute;
+                left: -5000px;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: block;
+                    padding: 2px 0 @marginSmall;
+                    margin-bottom: @marginSmall;
+                    background-color: #ddd;
+                    border: 2px solid #ddd;
+
+                    &.active, &:hover {
+                        background-color: @colorWhite;
+                        border: 2px solid @colorButtonBlue;
+
+                        p {
+                            color: @colorButtonBlue;
+                        }
+
+                        div {
+                            &.active, &:hover {
+                                background-color: @colorButtonBlue;
+                                color: @colorWhite;
+                                border: 1px solid @colorButtonBlue;
+                            }
+                        }
+                    }
+
+                    p {
+                        display: inline-block;
+                        width: 15%;
+                        font-size: 16px;
+                        font-size: 1.6rem;
+                        padding: 0 2%;
+                    }
+
+                    div {
+                        background-color: @colorWhite;
+                        display: inline-block;
+                        width: 25%;
+                        border: 1px solid #ccc;
+                        color: #ccc;
+                        font-size: 12px;
+                        font-size: 1.2rem;
+                        text-align: center;
+                        padding: 8px 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .date-time {
+                display: block;
+                padding: @marginSmall 0 @marginSmall @marginSmall;
+                background-color: #ddd;
+                border: 2px solid #ddd;
+                text-align: left;
+
+                #date {
+                        width: 50%;
+                        min-width: 160px;
+                        margin-right: 4%;
+                        text-indent: 5px;
+                        color: #999;
+                }
+
+                #time {
+                    display: inline-block;
+                    height: 42px;
+                    width: 25%;
+                    min-width: 70px;
+                    max-width: 90px;
+                    font-size: 14px;
+                    font-size: 1.4rem;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    cursor: pointer;
+                    border-radius: 0;
+                    border: 1px solid #d4d4d4;
+                    text-indent: 12px;
+                    color: #999;
+
+                    &.black {
+                        text-indent: 5px;
+                    }
+
+                    &:-moz-focusring {
+                        color: transparent;
+                        text-shadow: 0 0 0 @colorBlack;
+                    }
+
+                    &:focus {
+                        outline: 1px solid @colorButtonBlue;
+                        border-color: @colorButtonBlue;
+                    }
+                }
+            }
+
+            button {
+                background-color: @colorButtonBlue;
+                color: #fff;
+                border-radius: 4px;
+                display: inline-block;
+                height: 40px;
+                text-align: center;
+                width: 100%;
+                transition: none;
+
+                &:hover {
+                    background-color: @colorButtonBlueHover;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .five-in-thirty {
+        .hero {
+            .right-headline {
+                h1 {
+                    font-size: 40px;
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        .contact-container {
+            .left-side,
+            .right-side {
+                display: block;
+                width: 100%;
+                margin: auto;
+            }
+
+            .right-side {
+                margin-top: @marginLg;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .five-in-thirty {
+        .hero {
+            .left-box {
+                display: block;
+                margin: auto;
+            }
+            .right-headline {
+                display: none;
+            }
+        }
+
+        .contact-container {
+            .left-side {
+                h4 {
+                    color: @colorMedGrey;
+
+                    &.mobile {
+                        display: block;
+                        color: @colorBlack;
+                        margin-bottom: @marginSmall;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .five-in-thirty {
+        .hero {
+            min-height: 370px;
+            .left-box {
+                max-width: 260px;
+                height: 290px;
+
+                h4 {
+                    font-size: 80px;
+                    font-size: 8rem;
+                }
+
+                p {
+                    font-size: 19px;
+                    font-size: 1.9rem;
+                }
+            }
+        }
+
+        .contact-container {
+            .right-side {
+                padding-left: @marginSmall;
+                padding-right: @marginSmall;
+
+                form {
+                    input {
+                        font-size: 12px;
+                        font-size: 1.2rem;
+                    }
+
+                    ul {
+                        li {
+                            p {
+                                width: auto;
+                            }
+                            div {
+                                width: 23%;
+                            }
+                        }
+                    }
+
+                    .date-time {
+                        padding-right: @marginSmall;
+
+                        #date {
+                            width: 100%;
+                            max-width: 100%;
+                            margin-bottom: @marginSmall;
+                        }
+
+                        #time {
+                            width: 100%;
+                            max-width: 100%;
+
+                            &.black {
+                                text-indent: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

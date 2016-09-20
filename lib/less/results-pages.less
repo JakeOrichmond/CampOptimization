@@ -1,0 +1,250 @@
+// ------------------------------
+// INDIVIDUAL RESULTS PAGE STYLES
+// ------------------------------
+// Individual work pages
+.work {
+    .header + div {
+        margin-top: 100px;
+        width: auto;
+        padding: 0 0 60px 0;
+    }
+
+    .right-results {
+        padding-right: @marginLg;
+        padding-bottom: @marginMed;
+
+        .logo {
+            width: 200px;
+            margin-bottom: @marginSmall;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        h2 {
+            font-size: 34px;
+            font-size: 3.4rem;
+            font-weight: 900;
+            margin-bottom: 0;
+            text-transform: none;
+        }
+
+        p {
+            font-size: 16px;
+            font-size: 1.6rem;
+            text-transform: none;
+            color: @colorBlack;
+
+            &.subtitle {
+                font-size: 24px;
+                font-size: 2.4rem;
+            }
+        }
+
+        a {
+            display: inline-block;
+            color: @colorLightBlue;
+
+            p {
+                color: @colorLightBlue;
+            }
+        }
+
+        i {
+            &:last-child {
+                img {
+                    margin-right: 0;
+                }
+            }
+
+            img {
+                width: 50px;
+                margin-right: @marginMed;
+            }
+        }
+
+        h5 {
+            font-size: 22px;
+            font-size: 2.2rem;
+            text-transform: none;
+        }
+
+        .results-callout {
+            width: 45%;
+            max-width: 180px;
+            display: inline-block;
+            margin-right: 3%;
+            vertical-align: top;
+
+            h3 {
+                font-size: 48px;
+                font-size: 4.8rem;
+                font-weight: 300;
+            }
+
+            small {
+                font-size: 14px;
+                font-size: 1.4rem;
+            }
+        }
+
+        .key-services-list {
+
+            ul {
+                &.bulleted {
+                    padding-left: 18px;
+
+                    li {
+                        color: @colorBlack;
+                    }
+                }
+            }
+        }
+
+        .blue {
+            color: @colorLightBlue;
+        }
+    }
+
+    .work-img-grid {
+        padding-left: @marginLg;
+
+        #slider {
+            margin: 0 auto @marginXLg;
+            height: 400px;
+
+            .slides {
+                height: 100%;
+
+                li {
+                    background-image: none;
+                }
+            }
+
+            .flex-control-nav {
+                height: auto;
+                margin: auto;
+                background-color: transparent;
+                bottom: 50px;
+
+                li {
+                    width: auto;
+                    border: none;
+                    margin: 0 12px;
+                    display: inline-block;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+
+                    a {
+                        background: #FFF;
+                        background: rgba(255, 255, 255, 0.7);
+                        width: 20px;
+                        height: 20px;
+                        box-shadow: none;
+
+                        &:hover, &.flex-active {
+                            background: @colorLightBlueHover;
+                            background: rgba(92, 196, 197, 1);
+                        }
+                    }
+                }
+            }
+
+            .flex-direction-nav {
+                top: auto;
+                bottom: 22px;
+
+                a {
+                    opacity: 1;
+                    width: 20px;
+                    height: 40px;
+                    top: auto;
+                    bottom: 0;
+                    right: 50%;
+                    left: auto;
+
+                    &.flex-prev {
+                        margin-right: 75px;
+
+                        i {
+                            background: url("/lib/img/slider/slideshow_arrow_left_mobile.png") no-repeat;
+                            background-size: auto 100%;
+                        }
+                    }
+
+                    &.flex-next {
+                        margin-right: -95px;
+
+                        i {
+                            background: url("/lib/img/slider/slideshow_arrow_right_mobile.png") no-repeat;
+                            background-size: auto 100%;
+                        }
+                    }
+
+                    i {
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        span {
+            font-size: 66px;
+            margin-bottom: -10px;
+            line-height: 0;
+            display: block;
+            font-family: cursive;
+            padding-top: 20px;
+            color: @colorLightBlue;
+
+            &.second {
+                float: right;
+                margin-bottom: 0px;
+                padding-top: 0;
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+                margin-top: -19px;
+            }
+        }
+
+        p {
+            padding: 0 @marginLg;
+        }
+
+        h3 {
+            text-transform: none;
+            padding-left: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .work {
+        .right-results {
+            padding-right: 15px;
+        }
+
+        .work-img-grid {
+            padding: 15px;
+        }
+    }
+}
+@media screen and (max-width: 481px) {
+    .work {
+        .right-results {
+            .results-callout {
+                width: 47%;
+            }
+        }
+    }
+}

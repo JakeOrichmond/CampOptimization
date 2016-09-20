@@ -1,0 +1,103 @@
+// -------------
+// UTILITY STYLES
+// -------------
+.transition {
+	transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+}
+
+.transitionSlowEase {
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+.transitionSlow {
+	transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+}
+
+.blur {
+	-webkit-filter: blur(5px);
+	-o-filter: blur(5px);
+	-moz-filter: blur(5px);
+	filter: blur(5px);
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.leftBorder {
+	border-left: 1px dashed @colorBlack;
+}
+
+.rightBorder {
+	border-right: 1px dashed @colorBlack;
+}
+
+.topBorder {
+	border-top: 1px dashed @colorBlack;
+}
+
+.topBorderSolid {
+	border-top: 1px solid @colorBlack;
+}
+
+.bottomBorder {
+	border-bottom: 1px dashed @colorBlack;
+}
+
+.fixed {
+	//  position : fixed;
+	height: 100%;
+	overflow: hidden;
+}
+
+.blue {
+	color: @colorLightBlue;
+}
+
+.blue-hover:hover {
+	.blue;
+}
+
+.black {
+	color: @colorBlack !important;
+}
+
+.mobile-hide,
+.mobile-portrait-hide,
+.mobile-lg-hide {
+	display: block;
+}
+
+.mobile-show,
+.mobile-toggle-hide,
+.mobile-toggle-show,
+.mobile-portrait-show,
+.mobile-lg-show,
+.mobile-menu {
+	display: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}

@@ -1,0 +1,159 @@
+// -----------------------
+// HOME DATA ACTION STYLES
+// -----------------------
+.home-data-actions {
+    margin-top: @marginXLg;
+    margin-bottom: @marginXLg;
+
+    h5 {
+        color: #000;
+        text-transform: none;
+        font-weight: 400;
+        font-size: 28px;
+        font-size: 2.8rem;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin-bottom: @marginXLg;
+
+        li {
+            display: inline-block;
+            width: 45%;
+            margin-top: @marginXLg;
+            vertical-align: text-top;
+
+            &:nth-child(odd) {
+                margin-right: 10%;
+            }
+
+            p {
+                font-size: 16px;
+                font-size: 1.6rem;
+                line-height: 28px;
+                line-height: 2.8rem;
+                font-weight: 300;
+            }
+
+            div:first-child {
+                margin-bottom: @marginMed;
+            }
+
+            i img {
+                width: 130px;
+                height: 130px;
+                display: inline-block;
+                border-radius: 100%;
+            }
+
+            .icon-text {
+                width: 70%;
+                width: ~"-moz-calc(100% - 130px)";
+                width: ~"-webkit-calc(100% - 130px)";
+                width: ~"-o-calc(100% - 130px)";
+                width: ~"calc(100% - 130px)";
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 0 0 20px;
+
+                p {
+                    font-size: 21px;
+                    font-size: 2.1rem;
+                    line-height: 32px;
+                    line-height: 3.2rem;
+                }
+
+                p:first-child {
+                    font-size: 26px;
+                    font-size: 2.6rem;
+                    font-weight: 500;
+                }
+            }
+
+            a {
+                font-size: 17px;
+                font-size: 1.7rem;
+                color: #000;
+
+                &:hover {
+                    .icon-text {
+                        p:first-child {
+                            span {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                &.learn-more {
+                    color: @colorButtonBlue;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: @colorButtonBlueHover;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .home-data-actions {
+        ul {
+
+            li {
+                width: 100%;
+
+                &:nth-child(odd) {
+                    margin-right: 0;
+                }
+
+                i {
+                    img {
+                        height: 130px;
+                        width: 130px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media screen and (max-width: 641px) {
+    .home-data-actions {
+        ul {
+            li {
+                .icon-text {
+                    width: 80%;
+                    width: ~"-moz-calc(100% - 80px)";
+                    width: ~"-webkit-calc(100% - 80px)";
+                    width: ~"-o-calc(100% - 80px)";
+                    width: ~"calc(100% - 80px)";
+
+                    p {
+                        font-size: 16px;
+                        font-size: 1.6rem;
+                        line-height: 23px;
+                        line-height: 2.3rem;
+                    }
+
+                    p:first-child {
+                        font-size: 2px;
+                        font-size: 2rem;
+                    }
+                }
+                i {
+                    img {
+                        height: 80px;
+                        width: 80px;
+                    }
+                }
+
+            }
+        }
+    }
+}
