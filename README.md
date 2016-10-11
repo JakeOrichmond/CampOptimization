@@ -1,5 +1,10 @@
-To view this project clone it from this repository in your terminal https://github.com/JakeOrichmond/CampOptimization and the php -S localhost:8080
-Open up your browser and go to localhost:8080 in your address bar and you will see the web page.
+To view this project clone it from this repository in your terminal
+- git clone https://github.com/JakeOrichmond/CampOptimization to your desktop and then
+- cd into the project folder  
+type in
+- php -S localhost:8080 after it is cloned
+in your terminal. Open up your browser and go to
+- localhost:8080 in your address bar and you will see the web page.
 
 Dependencies:
 - Third-party dependencies are managed by bower
