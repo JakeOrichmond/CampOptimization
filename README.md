@@ -1,3 +1,6 @@
+To view this project clone it from this repository in your terminal https://github.com/JakeOrichmond/CampOptimization and the php -S localhost:8080
+Open up your browser and go to localhost:8080 in your address bar and you will see the web page.
+
 Dependencies:
 - Third-party dependencies are managed by bower
 
@@ -7,7 +10,7 @@ Compilers:
 
 CSS/LESS:
 - Sample styles can be found in /styles
-- Styles that require more than few rules should have their own LESS file. 
+- Styles that require more than few rules should have their own LESS file.
 - Mobile styles should be included at the end of the LESS file containing the styles to which they apply.
 
 
